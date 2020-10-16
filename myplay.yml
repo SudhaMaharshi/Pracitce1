@@ -10,9 +10,20 @@
      apt:
       name: nginx
       state: latest
+     become: yes 
 
+   
+   - name: Remove file (delete file)
+     file:
+      path: /etc/nginx/sites-enabled/default
+      state: absent
+
+   
+   
+   
+   
    - name: start nginx service
      service:
       name: nginx
-      state: started
+      state: restart
       enabled: yes
