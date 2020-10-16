@@ -9,4 +9,5 @@
     apt:
       name: nginx
       state: latest
+      update_cache: true
        
