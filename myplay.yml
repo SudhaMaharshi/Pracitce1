@@ -2,22 +2,17 @@
 - hosts: all
   become: yes
   tasks:
-  - name: Add epel-release repo
-    apt:
-      name: epel-release
-      state: present
-
-  - name: Install nginx
-    apt:
+   - name: i want to update the ubuntu server
+     apt:
+      update_cache: yes
+  
+   - name: i want to install the nginx server
+     apt:
       name: nginx
-      state: present
+      state: latest
 
-  - name: Insert Index Page
-    template:
-      src: index.html
-      dest: /usr/share/nginx/html/index.html
-
-  - name: Start NGiNX
-    service:
+   - name: start nginx service
+     service:
       name: nginx
       state: started
+      enabled: yes
