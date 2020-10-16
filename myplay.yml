@@ -8,6 +8,5 @@
   - name: i want to install the nginx 
     apt:
       name: nginx
-      state: present
-      default_release: squeeze-backports
-      update_cache: yes 
+      state: latest
+       
