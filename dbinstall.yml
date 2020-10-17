@@ -21,7 +21,7 @@
        enabled: yes
     
    - name: creating mysql user 
-     mysql_user:
+     community.mysql.mysql_user:
        name: "{{DBuser}}"
        password: "{{DBpassword}}"
        priv: ' * , *:ALL '
