@@ -30,4 +30,4 @@
    - name: creating database on sql
      mysql_db:
        name: "{{DBname}}"
-       state: presnet 
+       state: present 
