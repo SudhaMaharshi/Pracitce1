@@ -21,11 +21,10 @@
        enabled: yes
     
    - name: creating mysql user 
-     community.mysql.mysql_user:
+     mysql_user:
        name: "{{DBuser}}"
        password: "{{DBpassword}}"
-       priv: ' * , *:ALL '
-       host: '%'
+       priv: '*.*:ALL'
        state: present
 
    - name: creating database on sql
